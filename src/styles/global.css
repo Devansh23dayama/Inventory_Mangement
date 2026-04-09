@@ -1,0 +1,48 @@
+/* ============================================================
+   GLOBAL STYLES — InvenTrack
+   Design: Industrial Minimal — dark slate + electric green
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0d0f12;
+  --bg2:       #13161b;
+  --bg3:       #1a1e26;
+  --bg4:       #21262f;
+  --green:     #22c55e;
+  --green-dim: #16a34a;
+  --red:       #ef4444;
+  --amber:     #f59e0b;
+  --blue:      #3b82f6;
+  --purple:    #8b5cf6;
+  --text:      #f1f5f9;
+  --text2:     #94a3b8;
+  --text3:     #475569;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.12);
+  --shadow:    0 4px 24px rgba(0,0,0,0.4);
+  --radius:    10px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+button { cursor: pointer; font-family: 'Outfit', sans-serif; }
+input, select, textarea { font-family: 'Outfit', sans-serif; }
+a { text-decoration: none; color: inherit; }

@@ -1,0 +1,65 @@
+.topbar {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.left { display: flex; flex-direction: column; }
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.breadcrumb {
+  font-size: 0.72rem;
+  color: var(--text2);
+  font-family: 'DM Mono', monospace;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.statusDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.statusText {
+  font-size: 0.75rem;
+  color: var(--text2);
+  font-family: 'DM Mono', monospace;
+}
+
+.refreshBtn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.refreshBtn:hover {
+  color: var(--text);
+  border-color: var(--border2);
+}

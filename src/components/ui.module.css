@@ -1,0 +1,99 @@
+/* BUTTON */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  border-radius: 8px; font-weight: 600; border: none;
+  transition: all 0.2s; outline: none; white-space: nowrap;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* variants */
+.green  { background: var(--green); color: #000; }
+.green:hover:not(:disabled)  { background: var(--green-dim); box-shadow: 0 4px 14px rgba(34,197,94,0.3); transform: translateY(-1px); }
+.ghost  { background: var(--bg3); color: var(--text2); border: 1px solid var(--border); }
+.ghost:hover:not(:disabled)  { color: var(--text); border-color: var(--border2); }
+.red    { background: rgba(239,68,68,0.12); color: var(--red); border: 1px solid rgba(239,68,68,0.2); }
+.red:hover:not(:disabled)    { background: rgba(239,68,68,0.22); }
+.blue   { background: rgba(59,130,246,0.12); color: var(--blue); border: 1px solid rgba(59,130,246,0.2); }
+.blue:hover:not(:disabled)   { background: rgba(59,130,246,0.22); }
+
+/* sizes */
+.md  { padding: 0.55rem 1.1rem; font-size: 0.85rem; }
+.sm  { padding: 0.35rem 0.75rem; font-size: 0.75rem; }
+.lg  { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
+
+/* BADGE */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 0.18rem 0.6rem; border-radius: 20px;
+  font-size: 0.7rem; font-weight: 600;
+  font-family: 'DM Mono', monospace;
+}
+.badge_green  { background: rgba(34,197,94,0.1);  color: var(--green);  border: 1px solid rgba(34,197,94,0.2);  }
+.badge_red    { background: rgba(239,68,68,0.1);  color: var(--red);    border: 1px solid rgba(239,68,68,0.2);  }
+.badge_amber  { background: rgba(245,158,11,0.1); color: var(--amber);  border: 1px solid rgba(245,158,11,0.2); }
+.badge_blue   { background: rgba(59,130,246,0.1); color: var(--blue);   border: 1px solid rgba(59,130,246,0.2); }
+.badge_purple { background: rgba(139,92,246,0.1); color: var(--purple); border: 1px solid rgba(139,92,246,0.2); }
+
+/* STAT CARD */
+.statCard {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.2rem 1.3rem;
+  transition: border-color 0.2s;
+}
+.statCard:hover { border-color: var(--border2); }
+.statTop { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.7rem; }
+.statLabel { font-size: 0.75rem; color: var(--text2); font-weight: 500; letter-spacing: 0.03em; }
+.statIcon { font-size: 1.1rem; }
+.statNum { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+.statSub { font-size: 0.7rem; color: var(--text2); margin-top: 0.35rem; font-family: 'DM Mono', monospace; }
+
+/* FORM */
+.formGroup { display: flex; flex-direction: column; gap: 0.4rem; }
+.full { grid-column: 1 / -1; }
+.formLabel {
+  font-size: 0.7rem; color: var(--text2); font-weight: 600;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  font-family: 'DM Mono', monospace;
+}
+.input, .select {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.65rem 0.9rem;
+  color: var(--text); font-size: 0.88rem;
+  outline: none; transition: border 0.2s; width: 100%;
+}
+.input:focus, .select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.08);
+}
+.select option { background: var(--bg3); }
+
+/* EMPTY */
+.empty { text-align: center; padding: 4rem 2rem; color: var(--text2); }
+.emptyIcon { font-size: 2.5rem; margin-bottom: 0.8rem; opacity: 0.35; }
+.emptyText { font-size: 0.88rem; }
+
+/* LOADER */
+.loader {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 4rem;
+  color: var(--text2); gap: 1rem;
+  font-family: 'DM Mono', monospace; font-size: 0.8rem;
+}
+.spinner {
+  width: 24px; height: 24px;
+  border: 2px solid var(--border2);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* SECTION HEADER */
+.sectionHeader {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.sectionTitle { font-size: 1rem; font-weight: 700; }
+.sectionSub { font-size: 0.75rem; color: var(--text2); margin-top: 0.15rem; font-family: 'DM Mono', monospace; }
+.sectionActions { display: flex; align-items: center; gap: 0.7rem; }
